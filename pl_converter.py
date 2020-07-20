@@ -1,14 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import os
-import sys
-import logging
 import requests
 import config
-
-os.chdir(sys.path[0])  # set current directory as working for cron job
-
-logging.basicConfig(level=logging.INFO, filename='errors.log', format='%(asctime)s : %(message)s')
 
 
 def get_play_list(url):
@@ -56,5 +49,6 @@ if __name__ == '__main__':
     new_play_list = converter(old_play_list)
     if new_play_list:
         gen_file(new_play_list)
+        print("new playlist is ready")
     else:
-        logging.info("Incorrect playlist format")
+        print("Incorrect playlist format")
