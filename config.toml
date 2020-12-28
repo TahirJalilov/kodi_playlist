@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+
+[playlist] # m3u or m3u8 url
+url = ""
+
+[epg] # link to EPG
+url = "http://epg.it999.ru/epg.xml.gz"
+
+[logo] # link to logo
+url = "http://epg.it999.ru/img/"
