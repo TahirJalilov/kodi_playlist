@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Main module."""
+from typing import Union
 
 import requests
 import toml
@@ -21,7 +22,7 @@ def get_play_list(url):
     return playlist.iter_lines(decode_unicode=True)
 
 
-def playlist_converter(playlist_lines):
+def playlist_converter(playlist_lines) -> Union[str, bool]:
     """Convert playlist to the format that Kodi supports.
 
     Args:
